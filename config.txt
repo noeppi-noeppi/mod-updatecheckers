@@ -1,0 +1,14 @@
+# List of projects to generate update checkers for.
+# Keep it ordered by project name
+
+440998 # BingoLobby
+406119 # Bongo
+478675 # DupKeys
+470464 # Faded
+414359 # GoHome
+412525 # LibX
+460925 # MineMention
+400058 # MythicBotany
+420409 # NextChristmas
+532846 # Torment
+413234 # Travel Anchors

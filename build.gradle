@@ -1,0 +1,33 @@
+buildscript {
+    repositories {
+        maven { url = 'https://maven.minecraftforge.net/' }
+        maven { url = 'https://maven.parchmentmc.org/' }
+        maven { url = 'https://noeppi-noeppi.github.io/MinecraftUtilities/maven' }
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:5.1.21'
+        classpath 'io.github.noeppi_noeppi.tools:ModGradle:1.0.28'
+        classpath 'org.apache.maven:maven-artifact:3.8.1'
+        classpath 'org.apache.maven:maven-repository-metadata:3.8.1'
+        classpath 'com.google.code.findbugs:jsr305:3.0.1'
+        classpath 'commons-io:commons-io:2.11.0'
+    }
+}
+
+import net.minecraftforge.gradle.common.tasks.JarExec
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://noeppi-noeppi.github.io/MinecraftUtilities/maven' }
+}
+
+task generate(type: JarExec) {
+    tool = 'io.github.noeppi_noeppi.tools:CfUpdateChecker:1.0.1:fatjar'
+    args = [
+            '-c', project.file('config.txt').toPath().toAbsolutePath().normalize().toString(),
+            '-d', project.file('.').toPath().resolve(project.output).toAbsolutePath().normalize().toString(),
+            '-f', project.file('.').toPath().resolve(project.cache).toAbsolutePath().normalize().toString()
+    ]
+}
