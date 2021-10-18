@@ -6,11 +6,11 @@ pipeline {
         jdk 'java16'
     }
     stages {
-//         stage('Generate') {
-//             steps {
-//                 echo 'Building'
-//                 sh './gradlew generate'
-//             }
-//         }
+        stage('Generate') {
+            steps {
+                echo 'Building'
+                sh './gradlew generate'
+            }
+        }
     }
 }
