@@ -1,6 +1,7 @@
 # List of projects to generate update checkers for.
 # Keep it ordered by project name
 
+# noeppi_noeppi
 440998 # BingoLobby
 406119 # Bongo
 478675 # DupKeys
@@ -12,3 +13,22 @@
 420409 # NextChristmas
 532846 # Torment
 413234 # Travel Anchors
+
+# MelanX
+294815 # AIOT Botania
+361977 # Automatic Tool Swap
+395617 # Botanical Machinery
+382881 # Curse of Curses
+482122 # Ex Naturae
+351491 # Extra Disks
+444941 # Just Enough Advancements
+283021 # More XFood
+350955 # MoreVanillaArmor
+367254 # MoreVanillaLib
+349504 # MoreVanillaTools
+409823 # Recipe Printer
+446691 # Skyblock Builder
+315068 # Skyblock Ultima Tools
+463703 # UtilitiX
+359786 # Vanilla Excavators
+359343 # Vanilla Hammers
