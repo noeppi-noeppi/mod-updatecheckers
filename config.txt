@@ -20,6 +20,7 @@
 395617 # Botanical Machinery
 382881 # Curse of Curses
 482122 # Ex Naturae
+561528 # Excavar
 351491 # Extra Disks
 444941 # Just Enough Advancements
 283021 # More XFood
@@ -27,6 +28,7 @@
 367254 # MoreVanillaLib
 349504 # MoreVanillaTools
 409823 # Recipe Printer
+557696 # Sky GUIs
 446691 # Skyblock Builder
 315068 # Skyblock Ultima Tools
 463703 # UtilitiX
