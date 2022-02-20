@@ -33,5 +33,6 @@
 446691 # Skyblock Builder
 315068 # Skyblock Ultima Tools
 463703 # UtilitiX
+482123 # Vanilla AIOTs
 359786 # Vanilla Excavators
 359343 # Vanilla Hammers
