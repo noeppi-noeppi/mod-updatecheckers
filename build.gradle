@@ -28,7 +28,7 @@ repositories {
 }
 
 task generate(type: JarExec) {
-    tool = 'io.github.noeppi_noeppi.tools:CfUpdateChecker:1.0.2:fatjar'
+    tool = 'io.github.noeppi_noeppi.tools:CfUpdateChecker:1.1.1:fatjar'
     args = [
             '-c', project.file('config.txt').toPath().toAbsolutePath().normalize().toString(),
             '-d', project.file('.').toPath().resolve(project.output).toAbsolutePath().normalize().toString(),
