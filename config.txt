@@ -30,6 +30,7 @@
 349504 # MoreVanillaTools
 409823 # Recipe Printer
 583228 # Simple Backups
+610058 # Simply Tools
 557696 # Sky GUIs
 446691 # Skyblock Builder
 315068 # Skyblock Ultima Tools
