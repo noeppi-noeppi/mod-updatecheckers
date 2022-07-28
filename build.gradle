@@ -1,35 +1,27 @@
+import org.moddingx.modgradle.api.task.ClasspathExec
+
 buildscript {
     repositories {
         maven { url = 'https://maven.minecraftforge.net/' }
         maven { url = 'https://maven.parchmentmc.org/' }
-        maven { url = 'https://noeppi-noeppi.github.io/MinecraftUtilities/maven' }
+        maven { url = 'https://maven.moddingx.org/' }
         mavenCentral()
     }
 
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:5.1.21'
-        classpath 'io.github.noeppi_noeppi.tools:ModGradle:1.0.43'
-        classpath 'org.apache.maven:maven-artifact:3.8.1'
-        classpath 'org.apache.maven:maven-repository-metadata:3.8.1'
-        classpath 'com.google.code.findbugs:jsr305:3.0.1'
-        classpath 'commons-io:commons-io:2.11.0'
-    
-        // See https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228
-        classpath('org.apache.logging.log4j:log4j-api') { version { strictly '[2.15.0,)' } }
-        classpath('org.apache.logging.log4j:log4j-core') { version { strictly '[2.15.0,)' } }
+        classpath 'org.moddingx:ModGradle:3.0.1'
     }
 }
 
-import net.minecraftforge.gradle.common.tasks.JarExec
-
 repositories {
     mavenCentral()
-    maven { url = 'https://noeppi-noeppi.github.io/MinecraftUtilities/maven' }
+    maven { url = 'https://maven.moddingx.org/' }
 }
 
-task generate(type: JarExec) {
-    tool = 'io.github.noeppi_noeppi.tools:CfUpdateChecker:1.1.1:fatjar'
+task generate(type: ClasspathExec) {
+    tool = 'org.moddingx:UpdateCheckerGenerator:2.0.0'
     args = [
+            '-p', 'curse',
             '-c', project.file('config.txt').toPath().toAbsolutePath().normalize().toString(),
             '-d', project.file('.').toPath().resolve(project.output).toAbsolutePath().normalize().toString(),
             '-f', project.file('.').toPath().resolve(project.cache).toAbsolutePath().normalize().toString()
