@@ -20,6 +20,7 @@
 361977 # Automatic Tool Swap
 395617 # Botanical Machinery
 382881 # Curse of Curses
+650573 # Data Trader
 373014 # Default World Type
 482122 # Ex Naturae
 561528 # Excavar
