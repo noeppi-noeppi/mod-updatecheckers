@@ -19,6 +19,7 @@ repositories {
 }
 
 task generate(type: ClasspathExec) {
+    outputs.upToDateWhen { false }
     tool = 'org.moddingx:UpdateCheckerGenerator:2.0.0'
     args = [
             '-p', 'curse',
