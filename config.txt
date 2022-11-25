@@ -44,3 +44,4 @@
 482123 # Vanilla AIOTs
 359786 # Vanilla Excavators
 359343 # Vanilla Hammers
+420856 # Yellow Snow
