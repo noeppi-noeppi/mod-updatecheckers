@@ -29,11 +29,11 @@
 351491 # Extra Disks
 444941 # Just Enough Advancements
 684453 # Maledicta
-991847 # Modpack Slave
 283021 # More XFood
 350955 # MoreVanillaArmor
 367254 # MoreVanillaLib
 349504 # MoreVanillaTools
+991847 # Pack Essentials
 409823 # Recipe Printer
 583228 # Simple Backups
 701347 # Simply Harvesting
