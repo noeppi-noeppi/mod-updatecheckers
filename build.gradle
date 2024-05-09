@@ -4,23 +4,23 @@ buildscript {
     repositories {
         maven { url = 'https://maven.minecraftforge.net/' }
         maven { url = 'https://maven.parchmentmc.org/' }
-        maven { url = 'https://maven.moddingx.org/' }
+        maven { url = 'https://maven.moddingx.org/release' }
         mavenCentral()
     }
 
     dependencies {
-        classpath 'org.moddingx:ModGradle:3.0.1'
+        classpath 'org.moddingx:ModGradle:4.0.4'
     }
 }
 
 repositories {
     mavenCentral()
-    maven { url = 'https://maven.moddingx.org/' }
+    maven { url = 'https://maven.moddingx.org/release' }
 }
 
 task generate(type: ClasspathExec) {
     outputs.upToDateWhen { false }
-    tool = 'org.moddingx:UpdateCheckerGenerator:2.0.0'
+    tool = 'org.moddingx:UpdateCheckerGenerator:2.1.0'
     args = [
             '-p', 'curse',
             '-c', project.file('config.txt').toPath().toAbsolutePath().normalize().toString(),
