@@ -1,30 +1,33 @@
-import org.moddingx.modgradle.api.task.ClasspathExec
-
-buildscript {
-    repositories {
-        maven { url = 'https://maven.minecraftforge.net/' }
-        maven { url = 'https://maven.parchmentmc.org/' }
-        maven { url = 'https://maven.moddingx.org/release' }
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath 'org.moddingx:ModGradle:4.0.4'
-    }
+plugins {
+    id 'java'
 }
 
 repositories {
     mavenCentral()
     maven { url = 'https://maven.moddingx.org/release' }
+        maven { url = 'https://maven.neoforged.net/releases' }
 }
 
-task generate(type: ClasspathExec) {
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+configurations {
+    generator
+}
+
+dependencies {
+    generator 'org.moddingx:UpdateCheckerGenerator:3.1.0'
+}
+
+task generate(type: JavaExec) {
     outputs.upToDateWhen { false }
-    tool = 'org.moddingx:UpdateCheckerGenerator:2.1.0'
+    javaLauncher = javaToolchains.launcherFor(java.toolchain)
+    classpath configurations.generator
+    mainClass = 'org.moddingx.updatecheckergenerator.Main'
     args = [
-            '-p', 'curse',
+            '-p', 'curseforge',
             '-c', project.file('config.txt').toPath().toAbsolutePath().normalize().toString(),
             '-d', project.file('.').toPath().resolve(project.output).toAbsolutePath().normalize().toString(),
-            '-f', project.file('.').toPath().resolve(project.cache).toAbsolutePath().normalize().toString()
+            '-f', project.file('.').toPath().resolve(project.cache).toAbsolutePath().normalize().toString(),
+            '--pretty'
     ]
 }
