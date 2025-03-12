@@ -8,7 +8,6 @@
 440998 # BingoLobby
 406119 # Bongo
 478675 # DupKeys
-470464 # Faded
 414359 # GoHome
 559356 # IntTurtle
 460925 # MineMention
